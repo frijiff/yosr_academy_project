@@ -1,0 +1,24 @@
+{
+    "projectId": "69852cb4003496ea2e8d",
+    "projectName": "Yosr Academy",
+    "endpoint": "https://fra.cloud.appwrite.io/v1",
+    "sites": [
+        {
+            "$id": "yosr-academy-v2",
+            "name": "Yosr Academy V2",
+            "path": ".",
+            "framework": "vite",
+            "enabled": true,
+            "logging": true,
+            "timeout": 30,
+            "buildRuntime": "node-22",
+            "adapter": "static",
+            "installCommand": "npm install",
+            "buildCommand": "npm run build",
+            "outputDirectory": "dist",
+            "fallbackFile": "index.html",
+            "specification": "s-0.5vcpu-512mb"
+        }
+    ],
+    "project": "69852cb4003496ea2e8d"
+}

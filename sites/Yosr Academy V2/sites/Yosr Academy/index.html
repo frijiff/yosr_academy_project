@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yosr Academy | أكاديمية يسر</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --primary: #FF0066; /* Vibrant Pink */
+        --primary-dark: #D40055;
+        --secondary: #6A0066; /* Deep Purple */
+        --bg-app: #FEEBF6; /* Light Pink requested by user */
+        --text-dark: #2D002D;
+      }
+      body {
+        font-family: 'Cairo', sans-serif;
+        background-color: var(--bg-app);
+        color: var(--text-dark);
+        overflow-x: hidden;
+      }
+      .bg-primary { background-color: var(--primary); }
+      .text-primary { color: var(--primary); }
+      .bg-secondary { background-color: var(--secondary); }
+      .text-secondary { color: var(--secondary); }
+      .bg-sand { background-color: var(--bg-app); }
+      
+      .cta-button {
+        background-color: var(--primary);
+        color: white;
+        transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        position: relative;
+        overflow: hidden;
+      }
+      .cta-button:hover {
+        background-color: var(--primary-dark);
+        transform: translateY(-2px);
+        box-shadow: 0 10px 15px -3px rgba(255, 0, 102, 0.3);
+      }
+
+      /* Fix for numbers in RTL: Force LTR and use a clean sans-serif font */
+      .font-nums {
+        font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        direction: ltr !important;
+        unicode-bidi: bidi-override;
+        display: inline-block;
+      }
+      
+      html { scroll-behavior: smooth; }
+
+      ::-webkit-scrollbar { width: 8px; }
+      ::-webkit-scrollbar-track { background: var(--bg-app); }
+      ::-webkit-scrollbar-thumb { background: var(--secondary); border-radius: 10px; }
+
+      .card-premium {
+        background-color: rgba(255, 255, 255, 0.4);
+        backdrop-filter: blur(8px);
+        border: 1px solid rgba(106, 0, 102, 0.1);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
