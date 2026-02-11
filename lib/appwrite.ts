@@ -4,6 +4,10 @@ const client = new Client()
   .setEndpoint(import.meta.env.VITE_APPWRITE_ENDPOINT || 'https://fra.cloud.appwrite.io/v1')
   .setProject(import.meta.env.VITE_APPWRITE_PROJECT_ID || '69852cb4003496ea2e8d');
 
+// API Key is managed via environment variables for build/CLI purposes
+// and is not hardcoded here for security.
+const API_KEY = import.meta.env.VITE_APPWRITE_KEY;
+
 export const db = new Databases(client);
 export const storage = new Storage(client);
 export const IDUtil = ID; // to generate IDs in the app
